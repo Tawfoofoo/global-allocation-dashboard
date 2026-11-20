@@ -1,0 +1,27 @@
+{
+  "asof": "2026-11-19",
+  "rotation_asof": "2026-11-18",
+  "rotation_lag_sessions": 1,
+  "generated_utc": "2026-11-20T05:32:23.364734+00:00",
+  "regime": "Risk-off",
+  "target": {
+    "VT": 37,
+    "BND": 28,
+    "GLD": 13,
+    "BIL": 19,
+    "DBC": 3
+  },
+  "signal_type": "PRICE_BASED_ROTATION",
+  "observed_fund_flow": null,
+  "data_quality": {
+    "critical_prices_valid": true,
+    "rotation_complete": true,
+    "missing_latest_prices": [
+      "IBIT",
+      "INDA",
+      "XLC",
+      "XLRE"
+    ],
+    "excluded_from_rotation": {}
+  }
+}
