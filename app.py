@@ -3,23 +3,36 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Global Allocation & Rotation V1",
+    page_icon="🌍",
     layout="wide"
 )
 
-st.title("Global Asset Allocation & Rotation V1")
-st.caption("Private dashboard | Price-based rotation")
+st.title("🌍 Global Allocation & Rotation V1")
+st.caption("Price-based Global Asset Allocation Dashboard")
 
 st.info(
-    "Dashboard initialized. "
-    "Secure scan-data connection is not configured yet."
+    "Dashboard V1 is running. "
+    "Live scanner data connection is pending."
 )
 
-st.subheader("System status")
-st.write("Scanner: Global Allocation & Rotation V1")
-st.write("Data connection: Pending")
-st.write("Portfolio recommendations: Not available yet")
+st.subheader("Market Regime")
+st.metric("Current Status", "Pending verification")
 
-st.warning(
-    "Do not use allocation signals until "
-    "market data has been validated."
+st.subheader("Target Asset Allocation")
+st.warning("Waiting for validated scanner data.")
+
+st.subheader("Rotation Rankings")
+st.info("Rotation data connection is not configured yet.")
+
+st.subheader("Data Quality")
+st.write("Scanner connection: Pending")
+st.write("Critical ETF validation: Pending")
+st.write("Rotation completeness: Pending")
+
+st.divider()
+
+st.caption(
+    "This dashboard uses price-based rotation signals, "
+    "not observed institutional fund flows. "
+    "It is not investment advice."
 )
