@@ -297,3 +297,30 @@ st.caption(
     "For research and portfolio monitoring only. "
     "Not investment advice."
 )
+
+# Optional V2 research panel. Kept independent of validated V1 signals.
+st.divider()
+st.subheader('V2 Early Reversal & Hybrid Rotation (Research)')
+st.caption('Shadow signals only — no orders or automatic investment recommendations.')
+from v2_dashboard_data import load_v2
+v2, v2_issue = load_v2(DATA_DIR)
+if v2_issue:
+    st.info(v2_issue)
+else:
+    v2_date = str(v2['summary']['asof'])
+    st.caption(f'V2 market data date: {v2_date}. Verify freshness before acting.')
+    if v2_date != str(asof):
+        st.warning('V2 and V1 market dates differ. Rankings may not be comparable.')
+    counts = v2['summary'].get('signal_counts', {})
+    st.write('Early Reversal signal counts')
+    st.json(counts)
+    st.write('Early Reversal watchlist')
+    watch = v2['early'][v2['early']['Signal'].isin(['Early Watch', 'Early Entry', 'Confirmed Leader'])]
+    st.dataframe(watch, hide_index=True, use_container_width=True)
+    st.write('Hybrid Rotation rankings')
+    ranked = v2['hybrid'].sort_values('HybridScore', ascending=False)
+    st.dataframe(ranked, hide_index=True, use_container_width=True)
+    st.write('Qualified countries (maximum 3; may be empty)')
+    st.dataframe(v2['countries'], hide_index=True, use_container_width=True)
+    st.write('Signal transitions')
+    st.dataframe(v2['events'], hide_index=True, use_container_width=True)
