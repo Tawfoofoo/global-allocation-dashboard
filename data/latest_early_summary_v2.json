@@ -1,6 +1,6 @@
 {
-  "asof": "2026-11-25",
-  "generated_utc": "2026-11-27T05:17:07.763697+00:00",
+  "asof": "2026-11-27",
+  "generated_utc": "2026-11-28T04:54:25.443505+00:00",
   "mode": "SHADOW_ONLY_NO_ORDERS_NO_LINE",
   "country_universe": [
     "SPY",
@@ -18,18 +18,18 @@
   "bitcoin_proxy": "IBIT",
   "signal_counts": {
     "Neutral": 15,
-    "Weak / Downtrend": 14,
-    "Confirmed Leader": 1,
-    "Early Entry": 1
+    "Weak / Downtrend": 13,
+    "Early Entry": 2,
+    "Confirmed Leader": 1
   },
   "insufficient_data": [],
-  "event_count": 0,
+  "event_count": 2,
   "hybrid_status_counts": {
     "Weak / Downtrend": 16,
-    "Early Watch": 8,
-    "Neutral": 5,
-    "Confirmed Leader": 1,
-    "Early Entry": 1
+    "Early Watch": 10,
+    "Neutral": 2,
+    "Early Entry": 2,
+    "Confirmed Leader": 1
   },
   "qualified_countries": [
     "INDA"
